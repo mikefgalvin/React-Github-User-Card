@@ -82,7 +82,7 @@ handleChange = e => {
       <div className="App">
         <header className="App-header">
           <form>
-              <input onChange={this.handleChange} type='text' placeholder='Search another Username' value={this.state.inputValue} />
+              <input onChange={this.handleChange} type='text' placeholder='Search another username' value={this.state.inputValue} />
               <button onClick={this.handleClick}><span>&#128269;;</span></button>
           </form>
           <UserCard user={this.state.user}/>
