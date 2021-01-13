@@ -53,6 +53,11 @@ class App extends React.Component {
     .catch((err)=> {
         console.log(err);
     })
+
+    this.setState({
+      inputValue: [],
+    })
+    
 }
 
 handleChange = e => {
@@ -61,6 +66,15 @@ handleChange = e => {
   });
 }
 
+// onSubmit = e => {
+//   e.preventDefault();
+//   this.state.handleClick(this.state.inputValue)
+//   this.setState   ({
+//     inputValue: '',
+// });
+// }
+
+
 
 
   render(){
@@ -68,7 +82,7 @@ handleChange = e => {
       <div className="App">
         <header className="App-header">
           <form>
-              <input onChange={this.handleChange} type='text' placeholder='Search another Username' />
+              <input onChange={this.handleChange} type='text' placeholder='Search another Username' value={this.state.inputValue} />
               <button onClick={this.handleClick}><span>&#128269;;</span></button>
           </form>
           <UserCard user={this.state.user}/>
